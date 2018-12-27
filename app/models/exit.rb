@@ -3,7 +3,6 @@ class Exit < ApplicationRecord
   belongs_to :entry
   belongs_to :rate
   validate :rate_is_valid?
-
   def exit_parking
     entry.is_parking = false
     entry.save
@@ -52,7 +51,6 @@ class Exit < ApplicationRecord
     tarifa =  Rate.is_valid.first
     (tarifa.value * calcule_minutes)/60
   end
-
   def verify_discount
     if get_discount > 0
      return (total_amount * get_discount)/100

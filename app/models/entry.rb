@@ -2,7 +2,6 @@ class Entry < ApplicationRecord
   include EntryValidation
   belongs_to :vehicle, :foreign_key => :plate, :primary_key => :plate
   has_one :exit
-
   validates :plate , :length => { is: 7}
   validates :place , :length => { maximum: 400}
 

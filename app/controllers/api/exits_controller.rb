@@ -41,9 +41,10 @@ class ExitsController < ApplicationController
   def create
     @exit = Exit.new(exit_params)
     if @exit.rate_is_valid?
-       @exit.exit_parking
+
        render_default_error 'hay un error', 401
     else
+      @exit.exit_parking
       if @exit.save
         render_success_format('Nueva salida registrada',@exit,true)
       end
