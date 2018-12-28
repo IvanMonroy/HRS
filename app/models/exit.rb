@@ -2,6 +2,7 @@ class Exit < ApplicationRecord
   include ExitValidation
   belongs_to :entry
   belongs_to :rate
+  validates :entry_id , uniqueness: { message: 'Yas está registrado'}
   validate :rate_is_valid?
   def exit_parking
     entry.is_parking = false
@@ -53,9 +54,9 @@ class Exit < ApplicationRecord
   end
   def verify_discount
     if get_discount > 0
-     return (total_amount * get_discount)/100
+     (total_amount * get_discount)/100
     else
-      return 'NO tiene descuento'
+       0
     end
   end
 

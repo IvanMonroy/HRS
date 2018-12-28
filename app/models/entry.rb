@@ -22,7 +22,6 @@ class Entry < ApplicationRecord
     date_a = date_arrival.strftime("%Y-%m-%d")
     hour_a = hour_arrival.strftime("%H:%M:%S")
     ("#{date_a} #{hour_a}").to_time
-
   end
   def the_plate_is_parking?
     Entry.where('plate = ?', plate).is_in_parking.exists?
