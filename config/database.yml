@@ -1,5 +1,6 @@
 default: &default
   adapter: postgresql
+  database: HR_PARKING_W
   #  encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -8,7 +9,7 @@ default: &default
 development:
   <<: *default
   encoding: utf8
-  database: HR_PARKING_W
+
   username: postgres
   password: root
   host: localhost
