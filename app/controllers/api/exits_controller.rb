@@ -48,6 +48,7 @@ class ExitsController < ApplicationController
         render_success_format('Nueva salida registrada',@exit,true)
       end
     end
+    
   rescue Exception => e
     render_default_error e, 401
   end
