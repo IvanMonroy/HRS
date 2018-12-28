@@ -36,7 +36,6 @@ end
              methods: %i[time_exit_format],
              include:{
                  entry:{
-                     only: %i[plate place],
                      methods: %i[time_entry_format],
                      include:{
                          vehicle:{
