@@ -2,8 +2,8 @@ class Exit < ApplicationRecord
   include ExitValidation
   belongs_to :entry
   belongs_to :rate
+  validates :entry_id , uniqueness: { message: 'Yas está registrado'}
   validate :rate_is_valid?
-
   def exit_parking
     entry.is_parking = false
     entry.save
@@ -15,7 +15,13 @@ class Exit < ApplicationRecord
   def show_rates
     Rate.select("id, name").is_valid
   end
-
+  def show_dates
+    Exit.joins(:entry).where(entries: {entry_id: entry_id  })
+    Entry.joins(:exit).where(exits: {id: id })
+  end
+  def time_exit_format
+    format_time_exit.strftime("%Y-%m-%d %H:%M:%S")
+  end
 
   def rate_is_valid?
     Exit.where('date_departure = ?', Time.now.strftime("%Y-%m-%d")).exists?
@@ -34,8 +40,6 @@ class Exit < ApplicationRecord
       0
     end
   end
-
-
   def format_time_exit
     date_a = date_departure.strftime("%Y-%m-%d")
     hour_a = hour_departure.strftime("%H:%M:%S")
@@ -45,19 +49,18 @@ class Exit < ApplicationRecord
 
 
   def calcule_minutes
-    (Time.now.to_time - entry.format_time).abs
+    (format_time_exit - entry.format_time_entry).abs/60
   end
 
   def total_amount
-    tarifa =  Rate.is_valid.first
-    (tarifa.value * calcule_minutes)/60
+    (rate.value * calcule_minutes)
   end
 
   def verify_discount
     if get_discount > 0
-     return (total_amount * get_discount)/100
+     (total_amount * get_discount)/100
     else
-      return 'NO tiene descuento'
+       0
     end
   end
 

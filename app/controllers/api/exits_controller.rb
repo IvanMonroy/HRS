@@ -1,7 +1,7 @@
 module Api
 class ExitsController < ApplicationController
   include RenderHelper
-  before_action :set_exit, only: [:show, :edit, :update, :destroy], raise: false
+  before_action :set_exit, only: [:show, :edit, :update, :destroy, :show_details], raise: false
   skip_before_action :authenticate_user!, only: [:create], raise: false
   respond_to :json
   def all
@@ -25,6 +25,33 @@ class ExitsController < ApplicationController
 
   end
 
+def show_details
+  render_default_format(format_show_details(@exit) , true, 200)
+rescue Exception => e
+  puts e.inspect
+end
+  def format_show_details model
+    model.as_json(
+             only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
+             methods: %i[time_exit_format],
+             include:{
+                 entry:{
+                     only: %i[plate place],
+                     methods: %i[time_entry_format],
+                     include:{
+                         vehicle:{
+                             only: %i[ plate brand year],
+                             methods: %i[]
+                         }
+
+                     }
+                 },
+
+             }
+    )
+
+  end
+
   # GET /exits/new
   def new
     @exit = Exit.new
@@ -40,15 +67,15 @@ class ExitsController < ApplicationController
   # POST /exits.json
   def create
     @exit = Exit.new(exit_params)
-    if @exit.rate_is_valid?
-       @exit.exit_parking
-       render_default_error 'hay un error', 401
-    else
-      if @exit.save
+    @exit.discount = @exit.get_discount
+    @exit.total_time = @exit.calcule_minutes
+    @exit.ammount_to_paid = @exit.ammount_with_discount
+    if @exit.save
+        @exit.exit_parking
         render_success_format('Nueva salida registrada',@exit,true)
+    else
+      render_default_error 'No se pudo completar la operación', 401
       end
-    end
-    
   rescue Exception => e
     render_default_error e, 401
   end
@@ -80,7 +107,7 @@ class ExitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exit_params
-      params.permit(:entry_id, :date_departure, :hour_departure, :rate_id, :ammount_to_paid, :discount)
+      params.permit(:entry_id, :date_departure, :hour_departure, :rate_id)
     end
 end
   end

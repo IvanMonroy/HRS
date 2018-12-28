@@ -2,7 +2,6 @@ class Entry < ApplicationRecord
   include EntryValidation
   belongs_to :vehicle, :foreign_key => :plate, :primary_key => :plate
   has_one :exit
-
   validates :plate , :length => { is: 7}
   validates :place , :length => { maximum: 400}
 
@@ -19,11 +18,13 @@ class Entry < ApplicationRecord
   def show_vehicles
     Vehicle.select("plate").all
   end
-  def format_time
+  def time_entry_format
+    format_time_entry.strftime("%Y-%m-%d %H:%M:%S")
+  end
+  def format_time_entry
     date_a = date_arrival.strftime("%Y-%m-%d")
     hour_a = hour_arrival.strftime("%H:%M:%S")
     ("#{date_a} #{hour_a}").to_time
-
   end
   def the_plate_is_parking?
     Entry.where('plate = ?', plate).is_in_parking.exists?
