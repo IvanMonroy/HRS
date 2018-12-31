@@ -12,3 +12,4 @@ module VehicleValidation
     raise 'Error al insertar y/o actualizar el vehiculo, la placa ya esta registrada' if self.plate.present?
   end
 end
+

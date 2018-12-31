@@ -6,9 +6,7 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/concerns/vehicle_validation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/vehicle_validation.rb" afterDir="false" />
-    </list>
+    <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -466,12 +464,12 @@
       <updated>1545841370385</updated>
       <workItem from="1545841372286" duration="18505000" />
       <workItem from="1545916158069" duration="15082000" />
-      <workItem from="1546261829075" duration="7275000" />
+      <workItem from="1546261829075" duration="7875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47209000" />
+    <option name="totallyTimeSpent" value="47809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
