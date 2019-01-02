@@ -36,7 +36,7 @@ end
              methods: %i[time_exit_format],
              include:{
                  entry:{
-                     only: %i[place is_parking date_arrival ],
+                     only: %i[place is_parking],
                      methods: %i[time_entry_format],
                      include:{
                          vehicle:{
