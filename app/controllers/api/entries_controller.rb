@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   def index
     puts 'index'
     @entries = Entry.all.is_in_parking
-    render_default_format(@entries,true,200)
+    render_default_format(format_index_info(@entries),true,200)
   end
 
   # GET /entries/1
@@ -44,11 +44,24 @@ class EntriesController < ApplicationController
     else
         @entry.is_parking= true
         if @entry.save
-          render_success_format('Nueva entrada registrada',@entry,true)
+          render_success_format('Nueva entrada registrada',format_index_info(@entry),true)
         end
     end
   rescue Exception => e
     render_default_error e, 401
+  end
+  def format_index_info model
+    model.as_json(
+             include:{
+                 vehicle:{
+                     only: %i[plate brand year],
+                     methods: %i[]
+                 },
+             }
+
+
+
+          )
   end
 
   # PATCH/PUT /entries/1

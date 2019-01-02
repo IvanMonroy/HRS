@@ -15,6 +15,7 @@ class Entry < ApplicationRecord
   def name
     plate
   end
+
   def show_vehicles
     Vehicle.select("plate").all
   end

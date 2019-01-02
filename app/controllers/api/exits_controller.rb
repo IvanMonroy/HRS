@@ -72,7 +72,7 @@ end
     @exit.ammount_to_paid = @exit.ammount_with_discount
     if @exit.save
         @exit.exit_parking
-        render_success_format('Nueva salida registrada',@exit,true)
+        render_success_format('Nueva salida registrada. Información del ticket: ',format_show_details(@exit),true)
     else
       render_default_error 'No se pudo completar la operación', 401
       end
