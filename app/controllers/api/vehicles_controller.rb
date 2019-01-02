@@ -38,7 +38,7 @@ class VehiclesController < ApplicationController
   def create
     @vehicle = Vehicle.new(vehicle_params)
       if @vehicle.save
-        render_success_format('Nuevo vehículo registrado',@entry,true)
+        render_success_format('Nuevo vehículo registrado',@vehicle,true)
       end
   rescue Exception => e
     render_default_error e, 401
@@ -49,7 +49,7 @@ class VehiclesController < ApplicationController
   # PATCH/PUT /vehicles/1.json
   def update
        @vehicle.update_attributes!(vehicle_params)
-       render_success_format('Vehículo actualizado',@entry,true)
+       render_success_format('Vehículo actualizado',@vehicle,true)
   rescue Exception => e
     render_default_error e, 401
   end
@@ -58,7 +58,7 @@ class VehiclesController < ApplicationController
   # DELETE /vehicles/1.json
   def destroy
     @vehicle.destroy
-    render_success_format('Vehículo Eliminado',@entry,true)
+    render_success_format('Vehículo Eliminado',@vehicle,true)
   rescue Exception => e
     render_default_error e, 401
   end

@@ -58,10 +58,7 @@ class EntriesController < ApplicationController
                      methods: %i[]
                  },
              }
-
-
-
-          )
+    )
   end
 
   # PATCH/PUT /entries/1

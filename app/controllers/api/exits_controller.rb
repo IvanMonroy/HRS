@@ -35,6 +35,10 @@ end
              only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
              methods: %i[time_exit_format],
              include:{
+                 rate:{
+                     only: %i[value name description date_begin date_end],
+                     methods: %i[]
+                 },
                  entry:{
                      only: %i[place is_parking],
                      methods: %i[time_entry_format],
