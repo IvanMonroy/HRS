@@ -1,0 +1,905 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/entries": {
+      "post": {
+        "summary": "Create a entry",
+        "tags": [
+          "Entries"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "entry",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "date_arrival": {
+                  "type": "date"
+                },
+                "hour_arrival": {
+                  "type": "time"
+                },
+                "place": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "plate",
+                "date_arrival",
+                "hour_arrival",
+                "place"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "entry created successfully"
+          }
+        }
+      }
+    },
+    "/api/entries/{id}": {
+      "get": {
+        "summary": "Entries",
+        "tags": [
+          "Entries"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "date_arrival": {
+                  "type": "date"
+                },
+                "hour_arrival": {
+                  "type": "time"
+                },
+                "place": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "plate",
+                "date_arrival",
+                "hour_arrival",
+                "place"
+              ]
+            }
+          },
+          "404": {
+            "description": "Entry not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Entries",
+        "tags": [
+          "Entries"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "date_arrival": {
+                  "type": "date"
+                },
+                "hour_arrival": {
+                  "type": "time"
+                },
+                "place": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "plate",
+                "date_arrival",
+                "hour_arrival",
+                "place"
+              ]
+            }
+          },
+          "404": {
+            "description": "Entry not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an entry",
+        "tags": [
+          "Entries"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "entry",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "date_arrival": {
+                  "type": "date"
+                },
+                "hour_arrival": {
+                  "type": "time"
+                },
+                "place": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "plate",
+                "date_arrival",
+                "hour_arrival",
+                "place"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "entry updated successfully"
+          }
+        }
+      }
+    },
+    "/api/entries/": {
+      "get": {
+        "summary": "index: Trae todas las entradas registradas",
+        "tags": [
+          "Entries"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "date_arrival": {
+                  "type": "date"
+                },
+                "hour_arrival": {
+                  "type": "time"
+                },
+                "place": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "plate",
+                "date_arrival",
+                "hour_arrival",
+                "place"
+              ]
+            }
+          },
+          "404": {
+            "description": "Entry not found"
+          }
+        }
+      }
+    },
+    "/api/exits": {
+      "post": {
+        "summary": "Create a exit",
+        "tags": [
+          "Exits"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "exit",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entry_id": {
+                  "type": "integer"
+                },
+                "date_departure": {
+                  "type": "date"
+                },
+                "hour_departure": {
+                  "type": "time"
+                },
+                "rate_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "entry_id",
+                "date_departure",
+                "hour_departure",
+                "rate_id"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "exit created successfully"
+          }
+        }
+      }
+    },
+    "/api/exits/{id}": {
+      "get": {
+        "summary": "Exits",
+        "tags": [
+          "Exits"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entry_id": {
+                  "type": "integer"
+                },
+                "date_departure": {
+                  "type": "date"
+                },
+                "hour_departure": {
+                  "type": "time"
+                },
+                "rate_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "entry_id",
+                "date_departure",
+                "hour_departure",
+                "rate_id"
+              ]
+            }
+          },
+          "404": {
+            "description": "Exit not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exits",
+        "tags": [
+          "Exits"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entry_id": {
+                  "type": "integer"
+                },
+                "date_departure": {
+                  "type": "date"
+                },
+                "hour_departure": {
+                  "type": "time"
+                },
+                "rate_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "entry_id",
+                "date_departure",
+                "hour_departure",
+                "rate_id"
+              ]
+            }
+          },
+          "404": {
+            "description": "Exit not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a exit",
+        "tags": [
+          "Exits"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "exit",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entry_id": {
+                  "type": "integer"
+                },
+                "date_departure": {
+                  "type": "date"
+                },
+                "hour_departure": {
+                  "type": "time"
+                },
+                "rate_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "entry_id",
+                "date_departure",
+                "hour_departure",
+                "rate_id"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "exit updated successfully"
+          }
+        }
+      }
+    },
+    "/api/exits/": {
+      "get": {
+        "summary": "index: Trae todas las salidas registradas",
+        "tags": [
+          "Exits"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "entry_id": {
+                  "type": "integer"
+                },
+                "date_departure": {
+                  "type": "date"
+                },
+                "hour_departure": {
+                  "type": "time"
+                },
+                "rate_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "entry_id",
+                "date_departure",
+                "hour_departure",
+                "rate_id"
+              ]
+            }
+          },
+          "404": {
+            "description": "Exit not found"
+          }
+        }
+      }
+    },
+    "/api/rates": {
+      "post": {
+        "summary": "Create a rate",
+        "tags": [
+          "Rates"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "rate",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "date_begin": {
+                  "type": "date"
+                },
+                "date_end": {
+                  "type": "date"
+                }
+              },
+              "required": [
+                "value",
+                "name",
+                "date_begin",
+                "date_end"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "rate created successfully"
+          }
+        }
+      }
+    },
+    "/api/rates/{id}": {
+      "get": {
+        "summary": "Rates",
+        "tags": [
+          "Rates"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "name found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "date_begin": {
+                  "type": "date"
+                },
+                "date_end": {
+                  "type": "date"
+                }
+              },
+              "required": [
+                "value",
+                "name",
+                "date_begin",
+                "date_end"
+              ]
+            }
+          },
+          "404": {
+            "description": "rate not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Rates",
+        "tags": [
+          "Rates"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "name found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "date_begin": {
+                  "type": "date"
+                },
+                "date_end": {
+                  "type": "date"
+                }
+              },
+              "required": [
+                "value",
+                "name",
+                "date_begin",
+                "date_end"
+              ]
+            }
+          },
+          "404": {
+            "description": "rate not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an rate",
+        "tags": [
+          "Rates"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "rate",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "date_begin": {
+                  "type": "date"
+                },
+                "date_end": {
+                  "type": "date"
+                }
+              },
+              "required": [
+                "value",
+                "name",
+                "date_begin",
+                "date_end"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO CONTENT"
+          },
+          "201": {
+            "description": "rate update successfully"
+          }
+        }
+      }
+    },
+    "/api/rates/": {
+      "get": {
+        "summary": "index: Trae todas las tarifas registradas",
+        "tags": [
+          "Rates"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "text"
+                },
+                "date_begin": {
+                  "type": "date"
+                },
+                "date_end": {
+                  "type": "date"
+                }
+              },
+              "required": [
+                "value",
+                "name",
+                "date_begin",
+                "date_end"
+              ]
+            }
+          },
+          "404": {
+            "description": "Rate not found"
+          }
+        }
+      }
+    },
+    "/api/vehicles": {
+      "post": {
+        "summary": "Create a vehicle",
+        "tags": [
+          "Vehicles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "vehicle",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "plate",
+                "brand",
+                "year"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO CONTENT"
+          },
+          "201": {
+            "description": "vehicle created successfully"
+          }
+        }
+      }
+    },
+    "/api/vehicles/{id}": {
+      "get": {
+        "summary": "Vehicles",
+        "tags": [
+          "Vehicles"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Vehicle not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Vehicles",
+        "tags": [
+          "Vehicles"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Vehicle not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update an vehicle",
+        "tags": [
+          "Vehicles"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "vehicle",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "plate",
+                "brand",
+                "year"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "NO CONTENT"
+          },
+          "201": {
+            "description": "vehicle update successfully"
+          }
+        }
+      }
+    },
+    "/api/vehicles/": {
+      "get": {
+        "summary": "index: Trae todas los vehículos registradas",
+        "tags": [
+          "Vehicles"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "id found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plate": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "plate",
+                "brand",
+                "year"
+              ]
+            }
+          },
+          "404": {
+            "description": "Entrie not found"
+          }
+        }
+      }
+    }
+  }
+}
