@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "API V1",
+    "title": "SWAGGER HR PARKING",
     "version": "v1"
   },
   "paths": {
@@ -52,7 +52,7 @@
     },
     "/api/entries/{id}": {
       "get": {
-        "summary": "Entries",
+        "summary": "Find entries by id",
         "tags": [
           "Entries"
         ],
@@ -100,7 +100,7 @@
         }
       },
       "delete": {
-        "summary": "Entries",
+        "summary": "Delete entries",
         "tags": [
           "Entries"
         ],
@@ -199,7 +199,7 @@
     },
     "/api/entries/": {
       "get": {
-        "summary": "index: Trae todas las entradas registradas",
+        "summary": "index: get all entries",
         "tags": [
           "Entries"
         ],
@@ -286,7 +286,7 @@
     },
     "/api/exits/{id}": {
       "get": {
-        "summary": "Exits",
+        "summary": "Find exits by id",
         "tags": [
           "Exits"
         ],
@@ -334,7 +334,7 @@
         }
       },
       "delete": {
-        "summary": "Exits",
+        "summary": "Delete exits",
         "tags": [
           "Exits"
         ],
@@ -433,7 +433,7 @@
     },
     "/api/exits/": {
       "get": {
-        "summary": "index: Trae todas las salidas registradas",
+        "summary": "index: get all exits ",
         "tags": [
           "Exits"
         ],
@@ -523,7 +523,7 @@
     },
     "/api/rates/{id}": {
       "get": {
-        "summary": "Rates",
+        "summary": "Find rates by id",
         "tags": [
           "Rates"
         ],
@@ -574,7 +574,7 @@
         }
       },
       "delete": {
-        "summary": "Rates",
+        "summary": "Delete rates",
         "tags": [
           "Rates"
         ],
@@ -682,7 +682,7 @@
     },
     "/api/rates/": {
       "get": {
-        "summary": "index: Trae todas las tarifas registradas",
+        "summary": "index: get all rates",
         "tags": [
           "Rates"
         ],
@@ -771,7 +771,7 @@
     },
     "/api/vehicles/{id}": {
       "get": {
-        "summary": "Vehicles",
+        "summary": "Find vehicles by id",
         "tags": [
           "Vehicles"
         ],
@@ -793,7 +793,7 @@
         }
       },
       "delete": {
-        "summary": "Vehicles",
+        "summary": "Delete vehicles",
         "tags": [
           "Vehicles"
         ],
@@ -815,7 +815,7 @@
         }
       },
       "put": {
-        "summary": "Update an vehicle",
+        "summary": "Update vehicle",
         "tags": [
           "Vehicles"
         ],

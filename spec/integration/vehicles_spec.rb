@@ -23,15 +23,12 @@ describe 'Vehicles API' do
         let(:vehicle) { { plate: 'FFF-123', brand: 'chevrolet', year: 2000 } }
         run_test!
       end
-
     end
-
   end
 
-
+  #####################3 --GET ONE VEHICLE-- ####################
   path '/api/vehicles/{id}' do
-
-    get 'Vehicles' do
+    get 'Find vehicles by id' do
       tags 'Vehicles'
       produces 'application/json'
       parameter name: :id, :in => :path, :type => :string
@@ -44,8 +41,6 @@ describe 'Vehicles API' do
                    year:{ type: :integer}
                },
                required: [ 'plate', 'brand', 'year' ]
-
-
       end
       response '404', 'Vehicle not found' do
         let(:id) { 'invalid' }
@@ -54,13 +49,13 @@ describe 'Vehicles API' do
     end
   end
 
-  path '/api/vehicles/{id}' do
+  ###################### --DELETE VEHICLE -- #################
 
-    delete 'Vehicles' do
+  path '/api/vehicles/{id}' do
+    delete 'Delete vehicles' do
       tags 'Vehicles'
       produces 'application/json'
       parameter name: :id, :in => :path, :type => :string
-
       response '200', 'id found' do
         schema type: :object,
                properties: {
@@ -69,8 +64,6 @@ describe 'Vehicles API' do
                    year:{ type: :integer}
                },
                required: [ 'plate', 'brand', 'year' ]
-
-
       end
       response '404', 'Vehicle not found' do
         let(:id) { 'invalid' }
@@ -81,7 +74,7 @@ describe 'Vehicles API' do
   ################ --UPDATE -- ################
   path '/api/vehicles/{id}' do
 
-    put 'Update an vehicle' do
+    put 'Update vehicle' do
 
       tags 'Vehicles'
 

@@ -7,17 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/rate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/rate.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/entries_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/entries_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/exits_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/exits_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/rates_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/rates_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/swagger_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/swagger_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/v1/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/v1/swagger.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -52,11 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/integration/rates_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2220">
-              <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+            <state relative-caret-position="135">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/swagger_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -64,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/integration/vehicles_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="510">
+              <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -73,17 +77,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+            <state relative-caret-position="195">
+              <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/integration/exits_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="62" selection-start-line="62" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="1549">
+              <caret line="120" column="7" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -140,10 +144,11 @@
         <option value="$PROJECT_DIR$/app/models/rate.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/spec/integration/exits_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/integration/entries_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/swagger_helper.rb" />
         <option value="$PROJECT_DIR$/spec/integration/rates_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/integration/entries_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/integration/exits_spec.rb" />
       </list>
     </option>
   </component>
@@ -458,12 +463,12 @@
       <workItem from="1545916158069" duration="15082000" />
       <workItem from="1546261829075" duration="8252000" />
       <workItem from="1546434918886" duration="27279000" />
-      <workItem from="1546522327674" duration="2454000" />
+      <workItem from="1546522327674" duration="4151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77919000" />
+    <option name="totallyTimeSpent" value="79616000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,7 +483,7 @@
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.83023256" visible="true" weight="0.27045456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.83023256" visible="true" weight="0.27045456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.16976744" side_tool="true" weight="0.2659091" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -772,31 +777,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/exits_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/rates_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="62" selection-start-line="62" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/swagger_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+        <state relative-caret-position="270">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/integration/vehicles_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        <state relative-caret-position="510">
+          <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/rates_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+        <state relative-caret-position="195">
+          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/integration/exits_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1549">
+          <caret line="120" column="7" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
         </state>
       </provider>
     </entry>
