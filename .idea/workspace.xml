@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/spec/integration/entries_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/entries_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/exits_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/exits_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/rates_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/rates_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/vehicles_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/swagger_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/swagger_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger/v1/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/v1/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/entries_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/entries_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/swagger_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -77,8 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/entries_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -139,7 +143,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/vehicles_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/concerns/rate_validation.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/entries_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/exits_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/rate.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -149,6 +152,7 @@
         <option value="$PROJECT_DIR$/spec/integration/entries_spec.rb" />
         <option value="$PROJECT_DIR$/spec/integration/exits_spec.rb" />
         <option value="$PROJECT_DIR$/spec/swagger_helper.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/entries_controller.rb" />
       </list>
     </option>
   </component>
@@ -259,6 +263,12 @@
               <item name="HRPARKING_API" type="b2602c69:ProjectViewProjectNode" />
               <item name="HRPARKING_API" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HRPARKING_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HRPARKING_API" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="pids" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -468,12 +478,12 @@
       <workItem from="1545916158069" duration="15082000" />
       <workItem from="1546261829075" duration="8252000" />
       <workItem from="1546434918886" duration="27279000" />
-      <workItem from="1546522327674" duration="6616000" />
+      <workItem from="1546522327674" duration="9891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82081000" />
+    <option name="totallyTimeSpent" value="85356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/entries_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="90" column="62" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="90" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/exit.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -794,20 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/vehicles_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/rails_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-416" />
@@ -824,6 +813,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/integration/vehicles_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/integration/entries_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/entries_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
         </state>
       </provider>
     </entry>
