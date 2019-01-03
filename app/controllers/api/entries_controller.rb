@@ -21,7 +21,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-    render_default_format(format_index_info(@entries),true,200)
+    render_default_format(format_index_info(@entry),true,200)
   rescue Exception => e
     puts e.inspect
   end
