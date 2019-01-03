@@ -26,7 +26,7 @@ describe 'Vehicles API' do
 
   #####################3 --GET ONE VEHICLE-- ####################
   path '/api/vehicles/{plate}' do
-    get 'Find vehicles by id' do
+    get 'Find vehicles by plate' do
       tags 'Vehicles'
       produces 'application/json'
       parameter name: :plate, :in => :path, :type => :string
