@@ -31,6 +31,7 @@ describe 'Vehicles API' do
       produces 'application/json'
       parameter name: :plate, :in => :path, :type => :string
       response '200', 'plate found' do
+        run_test!
       end
       response '404', 'Vehicle not found' do
         run_test!
