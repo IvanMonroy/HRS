@@ -18,7 +18,6 @@ describe 'Exits API' do
           required: [ 'entry_id', 'date_departure', 'hour_departure','rate_id' ]
       }
       response '201', 'exit created successfully' do
-        let(:exit) { { entry_id: 1, date_departure: '2018-22-12', hour_departure: '12:12:45', rate_id: 1 } }
         run_test!
       end
     end
@@ -31,19 +30,23 @@ describe 'Exits API' do
       produces 'application/json'
       parameter name: :id, :in => :path, :type => :string
       response '200', 'id found' do
-        schema type: :object,
-               properties: {
-                   entry_id:{ type: :integer},
-                   date_departure:{ type: :date},
-                   hour_departure:{ type: :time},
-                   rate_id:{ type: :integer}
-               },
-               required: [ 'entry_id', 'date_departure', 'hour_departure','rate_id' ]
-        let(:id) { Exit.create( entry_id: 1, date_departure: '2018-22-12', hour_departure: '12:12:45', rate_id: 1).id }
         run_test!
       end
       response '404', 'Exit not found' do
-        let(:id) { 'invalid' }
+        run_test!
+      end
+    end
+  end
+############################ -- SHOW DETAILS -- ###################
+  path '/api/exits/show_details/{id}' do
+    get 'Show ticket' do
+      tags 'Exits'
+      produces 'application/json'
+      parameter name: :id, :in => :path, :type => :string
+      response '200', 'id found' do
+        run_test!
+      end
+      response '404', 'Exit not found' do
         run_test!
       end
     end
@@ -56,19 +59,9 @@ describe 'Exits API' do
       tags 'Exits'
       produces 'application/json'
       response '200', 'id found' do
-        schema type: :object,
-               properties: {
-                   entry_id:{ type: :integer},
-                   date_departure:{ type: :date},
-                   hour_departure:{ type: :time},
-                   rate_id:{ type: :integer}
-               },
-               required: [ 'entry_id', 'date_departure', 'hour_departure','rate_id' ]
-        let(:id) { Exit.create( entry_id: 1, date_departure: '2018-22-12', hour_departure: '12:12:45', rate_id: 1).id }
         run_test!
       end
       response '404', 'Exit not found' do
-        let(:id) { 'invalid' }
         run_test!
       end
     end
@@ -81,19 +74,9 @@ describe 'Exits API' do
       produces 'application/json'
       parameter name: :id, :in => :path, :type => :string
       response '200', 'id found' do
-        schema type: :object,
-               properties: {
-                   entry_id:{ type: :integer},
-                   date_departure:{ type: :date},
-                   hour_departure:{ type: :time},
-                   rate_id:{ type: :integer}
-               },
-               required: [ 'entry_id', 'date_departure', 'hour_departure','rate_id' ]
-        let(:id) { Exit.create( entry_id: 1, date_departure: '2018-22-12', hour_departure: '12:12:45', rate_id: 1).id }
         run_test!
       end
       response '404', 'Exit not found' do
-        let(:id) { 'invalid' }
         run_test!
       end
     end
@@ -115,7 +98,6 @@ describe 'Exits API' do
           required: [ 'entry_id', 'date_departure', 'hour_departure','rate_id' ]
       }
       response '201', 'exit updated successfully' do
-        let(:exit) { { entry_id: 1, date_departure: '2018-22-12', hour_departure: '12:12:45', rate_id: 1 } }
         run_test!
       end
     end

@@ -16,7 +16,7 @@ RSpec.configure do |config|
     'v1/swagger.json' => {
       swagger: '2.0',
       info: {
-        title: 'SWAGGER HR PARKING',
+        title: 'API HR PARKING',
         version: 'v1'
       },
       paths: {}

@@ -16,10 +16,8 @@ describe 'Rates API' do
               date_end:{type: :date}
           },
           required: [ 'value', 'name', 'date_begin', 'date_end']
-
           }
       response '201', 'rate created successfully' do
-        let(:rate) { { value: 500, name: 'nueva tarifa', description: 'promocion', date_begin: '2018-12-12', date_end: '2018-12-31' } }
         run_test!
       end
     end
@@ -32,20 +30,9 @@ path '/api/rates/{id}' do
     produces 'application/json'
     parameter name: :id, :in => :path, :type => :string
     response '200', 'name found' do
-      schema type: :object,
-             properties: {
-                 value:{ type: :integer},
-                 name:{ type: :string},
-                 description:{ type: :text},
-                 date_begin:{type: :date},
-                 date_end:{type: :date}
-             },
-             required: [ 'value', 'name', 'date_begin', 'date_end']
-      let(:id) { Rate.create(value: 30, name: 'bar', date_begin: '2018-12-12', date_end: '2018-12-12').id }
       run_test!
    end
     response '404', 'rate not found' do
-      let(:id) { 'invalid' }
       run_test!
     end
   end
@@ -58,21 +45,9 @@ end
       parameter name: :id, :in => :path, :type => :string
 
       response '200', 'name found' do
-        schema type: :object,
-               properties: {
-                   value:{ type: :integer},
-                   name:{ type: :string},
-                   description:{ type: :text},
-                   date_begin:{type: :date},
-                   date_end:{type: :date}
-               },
-               required: [ 'value', 'name', 'date_begin', 'date_end']
-
-        let(:id) { Rate.create(value: 30, name: 'bar', date_begin: '2018-12-12', date_end: '2018-12-12').id }
         run_test!
      end
       response '404', 'rate not found' do
-        let(:id) { 'invalid' }
         run_test!
       end
     end
@@ -97,11 +72,9 @@ end
           required: [ 'value', 'name', 'date_begin', 'date_end']
       }
       response '204', 'NO CONTENT' do
-        let(:rate) { { value: 30, name: 'bar', date_begin: '2018-12-12', date_end: '2018-12-12' } }
         run_test!
       end
       response '201', 'rate update successfully' do
-        let(:rate) { {value: 30, name: 'bar', date_begin: '2018-12-12', date_end: '2018-12-12' } }
         run_test!
       end
     end
@@ -113,22 +86,9 @@ end
       tags 'Rates'
       produces 'application/json'
       response '200', 'id found' do
-        schema type: :object,
-               properties: {
-                   value:{ type: :integer},
-                   name:{ type: :string},
-                   description:{ type: :text},
-                   date_begin:{type: :date},
-                   date_end:{type: :date}
-               },
-               required: [ 'value', 'name', 'date_begin', 'date_end']
-
-        let(:id) { Rate.create(  value: 30, name: 'bar', date_begin: '2018-12-12', date_end: '2018-12-12').id }
         run_test!
       end
-
       response '404', 'Rate not found' do
-        let(:id) { 'invalid' }
         run_test!
       end
     end

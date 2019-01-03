@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "SWAGGER HR PARKING",
+    "title": "API HR PARKING",
     "version": "v1"
   },
   "paths": {
@@ -69,30 +69,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "plate": {
-                  "type": "string"
-                },
-                "date_arrival": {
-                  "type": "date"
-                },
-                "hour_arrival": {
-                  "type": "time"
-                },
-                "place": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "plate",
-                "date_arrival",
-                "hour_arrival",
-                "place"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Entry not found"
@@ -117,30 +94,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "plate": {
-                  "type": "string"
-                },
-                "date_arrival": {
-                  "type": "date"
-                },
-                "hour_arrival": {
-                  "type": "time"
-                },
-                "place": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "plate",
-                "date_arrival",
-                "hour_arrival",
-                "place"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Entry not found"
@@ -208,30 +162,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "plate": {
-                  "type": "string"
-                },
-                "date_arrival": {
-                  "type": "date"
-                },
-                "hour_arrival": {
-                  "type": "time"
-                },
-                "place": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "plate",
-                "date_arrival",
-                "hour_arrival",
-                "place"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Entry not found"
@@ -303,30 +234,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "entry_id": {
-                  "type": "integer"
-                },
-                "date_departure": {
-                  "type": "date"
-                },
-                "hour_departure": {
-                  "type": "time"
-                },
-                "rate_id": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "entry_id",
-                "date_departure",
-                "hour_departure",
-                "rate_id"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Exit not found"
@@ -351,30 +259,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "entry_id": {
-                  "type": "integer"
-                },
-                "date_departure": {
-                  "type": "date"
-                },
-                "hour_departure": {
-                  "type": "time"
-                },
-                "rate_id": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "entry_id",
-                "date_departure",
-                "hour_departure",
-                "rate_id"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Exit not found"
@@ -431,6 +316,33 @@
         }
       }
     },
+    "/api/exits/show_details/{id}": {
+      "get": {
+        "summary": "Show ticket",
+        "tags": [
+          "Exits"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "id found"
+          },
+          "404": {
+            "description": "Exit not found"
+          }
+        }
+      }
+    },
     "/api/exits/": {
       "get": {
         "summary": "index: get all exits ",
@@ -442,30 +354,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "entry_id": {
-                  "type": "integer"
-                },
-                "date_departure": {
-                  "type": "date"
-                },
-                "hour_departure": {
-                  "type": "time"
-                },
-                "rate_id": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "entry_id",
-                "date_departure",
-                "hour_departure",
-                "rate_id"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Exit not found"
@@ -540,33 +429,7 @@
         ],
         "responses": {
           "200": {
-            "description": "name found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "value": {
-                  "type": "integer"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "text"
-                },
-                "date_begin": {
-                  "type": "date"
-                },
-                "date_end": {
-                  "type": "date"
-                }
-              },
-              "required": [
-                "value",
-                "name",
-                "date_begin",
-                "date_end"
-              ]
-            }
+            "description": "name found"
           },
           "404": {
             "description": "rate not found"
@@ -591,33 +454,7 @@
         ],
         "responses": {
           "200": {
-            "description": "name found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "value": {
-                  "type": "integer"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "text"
-                },
-                "date_begin": {
-                  "type": "date"
-                },
-                "date_end": {
-                  "type": "date"
-                }
-              },
-              "required": [
-                "value",
-                "name",
-                "date_begin",
-                "date_end"
-              ]
-            }
+            "description": "name found"
           },
           "404": {
             "description": "rate not found"
@@ -691,33 +528,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "value": {
-                  "type": "integer"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "text"
-                },
-                "date_begin": {
-                  "type": "date"
-                },
-                "date_end": {
-                  "type": "date"
-                }
-              },
-              "required": [
-                "value",
-                "name",
-                "date_begin",
-                "date_end"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Rate not found"
@@ -874,26 +685,7 @@
         ],
         "responses": {
           "200": {
-            "description": "id found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "plate": {
-                  "type": "string"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "plate",
-                "brand",
-                "year"
-              ]
-            }
+            "description": "id found"
           },
           "404": {
             "description": "Entrie not found"
