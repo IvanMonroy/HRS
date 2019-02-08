@@ -19,16 +19,17 @@ class ExitsController < ApplicationController
   # GET /exits/1
   # GET /exits/1.json
   def show
-    render_default_format(@exit, true, 200)
+    render_default_format(@exit, true, 200)if @exit.present?
+    render_default_error 'No existe está salida', 401 unless @exit.present?
   rescue Exception => e
-    puts e.inspect
-
+    render_default_error e, 401
   end
 
 def show_details
-  render_default_format(format_show_details(@exit) , true, 200)
+  render_default_format(format_show_details(@exit) , true, 200) if @exit.present?
+  render_default_error 'No existe un ticket', 401 unless @exit.present?
 rescue Exception => e
-  puts e.inspect
+  render_default_error e, 401
 end
   def format_show_details model
     model.as_json(
@@ -106,7 +107,9 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_exit
-      @exit = Exit.find(params[:id])
+      @exit = Exit.find_by(id:params[:id])
+    rescue Exception => e
+      render_default_error e, 401
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

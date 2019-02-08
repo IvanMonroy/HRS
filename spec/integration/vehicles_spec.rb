@@ -25,15 +25,15 @@ describe 'Vehicles API' do
   end
 
   #####################3 --GET ONE VEHICLE-- ####################
-  path '/api/vehicles/{plate}' do
-    get 'Find vehicles by plate' do
+  path '/api/vehicles/{id}' do
+    get 'Find vehicles by id' do
       tags 'Vehicles'
       produces 'application/json'
-      parameter name: :plate, :in => :path, :type => :string
-      response '200', 'plate found' do
-        run_test!
+      parameter name: :id, :in => :path, :type => :string
+      response '200', 'id found' do
       end
       response '404', 'Vehicle not found' do
+        let(:id) { 'invalid' }
         run_test!
       end
     end

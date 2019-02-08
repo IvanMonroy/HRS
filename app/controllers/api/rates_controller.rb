@@ -39,8 +39,12 @@ module Api
   # POST /rates.json
   def create
     @rate = Rate.new(rate_params)
-      if @rate.save
+    puts @rate.inspect
+      if @rate.save!
         render_success_format('Tarifa creada',@rate,true)
+      else
+        render_default_error 'Hubo un error', 401
+
       end
   rescue Exception => e
     render_default_error e, 401

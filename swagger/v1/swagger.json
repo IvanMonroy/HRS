@@ -580,9 +580,9 @@
         }
       }
     },
-    "/api/vehicles/{id}": {
+    "/api/vehicles/{plate}": {
       "get": {
-        "summary": "Find vehicles by id",
+        "summary": "Find vehicles by plate",
         "tags": [
           "Vehicles"
         ],
@@ -591,18 +591,23 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "plate",
             "in": "path",
             "type": "string",
             "required": true
           }
         ],
         "responses": {
+          "200": {
+            "description": "plate found"
+          },
           "404": {
             "description": "Vehicle not found"
           }
         }
-      },
+      }
+    },
+    "/api/vehicles/{id}": {
       "delete": {
         "summary": "Delete vehicles",
         "tags": [
