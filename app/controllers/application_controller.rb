@@ -3,4 +3,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     return true
   end
+  def status
+    render json: { data: 'ok' }
+  end
 end
