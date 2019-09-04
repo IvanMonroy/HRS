@@ -15,7 +15,7 @@ module VehicleValidation
   end
 
   def lenght_plate
-    raise 'La placa deberá tener almenos 7 carácteres (Ej. ABC-123).' if self.plate.length < 7
+    raise 'La placa deberá tener almenos 7 carácteres (Ej. ABC-123).' if self.plate.length < 6
     raise 'Placa demasiado larga, porfavor escribirla en un formato correcto (Ej. ABC-123).' if self.plate.length > 7
   end
 
