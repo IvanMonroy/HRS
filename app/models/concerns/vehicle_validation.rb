@@ -8,7 +8,7 @@ module VehicleValidation
 
   def validate_on_create
     insert_vehicle
-    length_plate
+    lenght_plate
     length_year
     validate_year
 
