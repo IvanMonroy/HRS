@@ -20,7 +20,7 @@ module VehicleValidation
   end
 
   def length_year
-    raise 'La placa deberá tener almenos 7 carácteres (Ej. ABC-123).' if self.year.to_s.length < 4
+    raise 'El año deberá tener almenos 4 carácteres (Ej. ABC-123).' if self.year.to_s.length < 4
   end
 
   def validate_year
