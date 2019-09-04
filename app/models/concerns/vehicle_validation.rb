@@ -3,7 +3,15 @@ module VehicleValidation
   included do
     #validate :delete_rate, :on => :destroy
     before_destroy :delete_vehicle
-   before_create :insert_vehicle, :length_plate, :length_year, :validate_year
+    before_create :validate_on_create
+  end
+
+  def validate_on_create
+    insert_vehicle
+    length_plate
+    length_year
+    validate_year
+
   end
 
   def lenght_plate
@@ -22,6 +30,7 @@ module VehicleValidation
   def delete_vehicle
     raise 'Error al eliminar el vehículo, hay entradas asociadas a este vehículo' if self.entry.exists?
   end
+
   def insert_vehicle
     raise 'Error al insertar y/o actualizar el vehiculo, la placa ya esta registrada' if self.plate.present?
   end
