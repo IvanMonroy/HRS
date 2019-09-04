@@ -32,7 +32,7 @@ module VehicleValidation
   end
 
   def insert_vehicle
-    raise 'Error al insertar y/o actualizar el vehiculo, la placa ya esta registrada' if self.plate.present?
+    raise 'Error al insertar y/o actualizar el vehiculo, la placa ya esta registrada' if Vehicle.where("plate = ?", self.plate).present?
   end
 end
 
