@@ -7,7 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/concerns/vehicle_validation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/vehicle_validation.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/vehicle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/vehicle.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +28,6 @@
   <component name="FavoritesManager">
     <favorites_list name="HRPARKING_API" />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>exi</find>
-      <find>FORMAT_S</find>
-      <find>rs</find>
-      <find>tar</find>
-      <find>entr</find>
-      <find>rat</find>
-      <find>ex</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -45,98 +38,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1486" />
-    <option name="width" value="1161" />
-    <option name="height" value="652" />
-  </component>
   <component name="ProjectId" id="1PpdnLyRkSfbFfMy3mQZHsVqnzm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="initializers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HRS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HRS" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
@@ -144,8 +47,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -172,7 +78,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rake.db:migrate:status: HRPARKING_API">
+  <component name="RunManager" selected="IRB console.Rails console: HRPARKING_API">
+    <configuration name="Rails console: HRPARKING_API" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="HRPARKING_API" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console -- --prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="Development: HRPARKING_API" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="HRPARKING_API" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -323,11 +248,13 @@
       <item itemvalue="Rake.test: HRPARKING_API" />
       <item itemvalue="Rake.routes: HRPARKING_API" />
       <item itemvalue="Rake.db:migrate:status: HRPARKING_API" />
+      <item itemvalue="IRB console.Rails console: HRPARKING_API" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Rake.db:migrate:status: HRPARKING_API" />
+        <item itemvalue="IRB console.Rails console: HRPARKING_API" />
         <item itemvalue="Rake.routes: HRPARKING_API" />
+        <item itemvalue="Rake.db:migrate:status: HRPARKING_API" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +287,9 @@
       <workItem from="1562248060140" duration="1032000" />
       <workItem from="1562333104676" duration="258000" />
       <workItem from="1563542468797" duration="598000" />
-      <workItem from="1566575140275" duration="638000" />
+      <workItem from="1566575140275" duration="4321000" />
+      <workItem from="1566827806420" duration="2546000" />
+      <workItem from="1567626595021" duration="2299000" />
     </task>
     <servers />
   </component>
@@ -381,10 +310,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1567628937265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
+    <SUITE FILE_PATH="coverage/HRS@routes__HRPARKING_API.rcov" NAME="routes: HRPARKING_API Coverage Results" MODIFIED="1566586667357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
   </component>
 </project>
