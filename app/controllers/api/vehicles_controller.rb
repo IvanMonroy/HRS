@@ -12,7 +12,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all.order(id: :asc)
     render_default_format(@vehicles,true,200)
   end
 
