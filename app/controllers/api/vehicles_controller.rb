@@ -20,7 +20,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
-    render_default_format(@vehicle,true,200)
+    render_default_format(@vehicles,true,200)
   rescue Exception => e
     puts e.inspect
   end
@@ -67,7 +67,7 @@ class VehiclesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_plate
-      @vehicle = Vehicle.find_by_plate(params[:plate])
+      @vehicles = Vehicle.where("plate like ? ",params[:plate])
     end
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
