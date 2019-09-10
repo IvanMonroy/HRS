@@ -1,7 +1,8 @@
 module Api
 class VehiclesController < ApplicationController
   include RenderHelper
-  before_action :set_vehicle, only: [:show, :edit, :update, :destroy], raise: false
+  before_action :set_vehicle, only: [:edit, :update, :destroy], raise: false
+  before_action :set_plate, only: [:show], raise: false
   skip_before_action :authenticate_user!, only: [:create], raise: false
   respond_to :json
   def all
@@ -65,6 +66,9 @@ class VehiclesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_plate
+      @vehicle = Vehicle.find_by_plate(params[:plate])
+    end
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
     end
