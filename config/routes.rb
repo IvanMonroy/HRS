@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
     resources :vehicles, only: %i[index create update destroy show] do
       collection do
-        get '/:plate', action: :show1
+        get 'show_by_plate/:plate', action: :show_by_plate
       end
 
     end
