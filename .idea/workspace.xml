@@ -288,7 +288,8 @@
       <workItem from="1566575140275" duration="4321000" />
       <workItem from="1566827806420" duration="2546000" />
       <workItem from="1567626595021" duration="3211000" />
-      <workItem from="1568147865421" duration="863000" />
+      <workItem from="1568147865421" duration="2386000" />
+      <workItem from="1568298877406" duration="203000" />
     </task>
     <servers />
   </component>
@@ -310,6 +311,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1568054033649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
-    <SUITE FILE_PATH="coverage/HRS@routes__HRPARKING_API.rcov" NAME="routes: HRPARKING_API Coverage Results" MODIFIED="1568148676086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
+    <SUITE FILE_PATH="coverage/HRS@routes__HRPARKING_API.rcov" NAME="routes: HRPARKING_API Coverage Results" MODIFIED="1568152597858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 module Api
 class VehiclesController < ApplicationController
   include RenderHelper
-  before_action :set_vehicle, only: [:edit, :update, :destroy], raise: false
+  before_action :set_vehicle, only: [:show, :edit, :update, :destroy], raise: false
   before_action :set_plate, only: [:show], raise: false
   skip_before_action :authenticate_user!, only: [:create], raise: false
   respond_to :json
@@ -19,8 +19,14 @@ class VehiclesController < ApplicationController
 
   # GET /vehicles/1
   # GET /vehicles/1.json
-  def show
+  def show1
     render_default_format(@vehicles,true,200)
+  rescue Exception => e
+    puts e.inspect
+  end
+
+  def show
+    render_default_format(@vehicle,true,200)
   rescue Exception => e
     puts e.inspect
   end

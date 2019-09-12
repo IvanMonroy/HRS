@@ -14,9 +14,9 @@ Rails.application.routes.draw do
     get 'rate/all'
     resources :rates, only: %i[index create update show destroy] do
     end
-    resources :vehicles, only: %i[index create update destroy] do
+    resources :vehicles, only: %i[index create update destroy show] do
       collection do
-        get '/:plate', action: :show
+        get '/:plate', action: :show1
       end
 
     end
