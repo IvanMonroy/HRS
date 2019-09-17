@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/vehicles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/vehicles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/vehicle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/vehicle.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rake.routes: HRPARKING_API">
+  <component name="RunManager" selected="IRB console.Rails console: HRPARKING_API">
     <configuration name="Rails console: HRPARKING_API" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="HRPARKING_API" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -248,8 +250,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Rake.routes: HRPARKING_API" />
         <item itemvalue="IRB console.Rails console: HRPARKING_API" />
+        <item itemvalue="Rake.routes: HRPARKING_API" />
         <item itemvalue="Rake.db:migrate:status: HRPARKING_API" />
       </list>
     </recent_temporary>
@@ -287,7 +289,9 @@
       <workItem from="1566827806420" duration="2546000" />
       <workItem from="1567626595021" duration="3211000" />
       <workItem from="1568147865421" duration="2386000" />
-      <workItem from="1568298877406" duration="991000" />
+      <workItem from="1568298877406" duration="3294000" />
+      <workItem from="1568380952096" duration="657000" />
+      <workItem from="1568731089054" duration="463000" />
     </task>
     <servers />
   </component>
@@ -308,7 +312,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1568054033649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
+    <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1568731469495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
     <SUITE FILE_PATH="coverage/HRS@routes__HRPARKING_API.rcov" NAME="routes: HRPARKING_API Coverage Results" MODIFIED="1568152597858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
+    <SUITE FILE_PATH="coverage/HRS@Development__HRPARKING_API.rcov" NAME="Development: HRPARKING_API Coverage Results" MODIFIED="1568731343257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
   </component>
 </project>

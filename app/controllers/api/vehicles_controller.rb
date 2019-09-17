@@ -73,7 +73,10 @@ class VehiclesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_plate
-      @vehicles = Vehicle.where("plate like ? ",params[:plate])
+      @vehicles = Vehicle.where("plate like ? ",params[:plate]).as_json(
+          only: %i[id plate brand year],
+          methods: %i[total_entries]
+      )
     end
     def set_vehicle
       @vehicle = Vehicle.find(params[:id])
