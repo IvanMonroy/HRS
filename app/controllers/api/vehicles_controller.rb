@@ -13,7 +13,10 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
-    @vehicles = Vehicle.all.order(id: :asc)
+    @vehicles = Vehicle.all.order(id: :asc).as_json(
+        only: %i[id plate brand year],
+        methods: %i[total_entries]
+    )
     render_default_format(@vehicles,true,200)
   end
 
