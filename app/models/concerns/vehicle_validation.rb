@@ -28,7 +28,7 @@ module VehicleValidation
   end
 
   def delete_vehicle
-    raise 'Error al eliminar el vehículo, hay entradas asociadas a este vehículo' if self.entry.exists?
+    raise 'Error al eliminar el vehículo, hay entradas asociadas a este vehículo' if self.entries.exists?
   end
 
   def insert_vehicle
