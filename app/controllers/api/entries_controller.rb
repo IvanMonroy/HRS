@@ -13,8 +13,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    puts 'index'
-    @entries = Entry.all.is_in_parking
+    @entries = Entry.all #.is_in_parking se quita para proeubas en angular
     render_default_format(format_index_info(@entries),true,200)
   end
 
