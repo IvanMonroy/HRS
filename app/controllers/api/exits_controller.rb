@@ -19,10 +19,7 @@ class ExitsController < ApplicationController
   def format_index model
     model.as_json(
         only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
-        methods: %i[time_exit_format],
-           entry:{
-                only: %i[plate]
-            }
+        methods: %i[time_exit_format get_plate]
     )
   end
 
