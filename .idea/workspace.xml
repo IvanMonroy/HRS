@@ -6,7 +6,11 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="" />
+    <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HRPARKING_API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/exits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/exits_controller.rb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,6 +292,10 @@
       <workItem from="1568298877406" duration="3294000" />
       <workItem from="1568380952096" duration="657000" />
       <workItem from="1568731089054" duration="1479000" />
+      <workItem from="1568920774800" duration="771000" />
+      <workItem from="1568931332689" duration="36000" />
+      <workItem from="1572291741788" duration="43000" />
+      <workItem from="1572620568732" duration="322000" />
     </task>
     <servers />
   </component>

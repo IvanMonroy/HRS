@@ -13,8 +13,19 @@ class ExitsController < ApplicationController
   # GET /exits.json
   def index
     @exits = Exit.all
-    render_default_format(@exits, true, 200)
+    render_default_format( format_index(@exits), true, 200)
   end
+
+  def format_index model
+    model.as_json(
+        only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
+        methods: %i[time_exit_format],
+           entry:{
+                only: %i[plate]
+            }
+    )
+  end
+
 
   # GET /exits/1
   # GET /exits/1.json
