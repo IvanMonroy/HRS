@@ -1,121 +1,140 @@
 module Api
-class ExitsController < ApplicationController
-  include RenderHelper
-  before_action :set_exit, only: [:show, :edit, :update, :destroy, :show_details], raise: false
-  skip_before_action :authenticate_user!, only: [:create], raise: false
-  respond_to :json
-  def all
-  end
-  def default_serializer_options
-    { root: false }
-  end
-  # GET /exits
-  # GET /exits.json
-  def index
-    @exits = Exit.all
-    render_default_format( format_index(@exits), true, 200)
-  end
+  class ExitsController < ApplicationController
+    include RenderHelper
+    before_action :set_exit, only: [:show, :edit, :update, :destroy, :show_details], raise: false
+    skip_before_action :authenticate_user!, only: [:create], raise: false
+    respond_to :json
 
-  def format_index model
-    model.as_json(
-        only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
-        methods: %i[time_exit_format get_plate]
-    )
-  end
+    def all
+    end
+
+    def default_serializer_options
+      {root: false}
+    end
+
+    # GET /exits
+    # GET /exits.json
+    def index
+      @exits = Exit.all
+      render_default_format(format_index(@exits), true, 200)
+    end
+
+    def format_index model
+      model.as_json(
+          only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
+          methods: %i[time_exit_format get_plate]
+      )
+    end
 
 
-  # GET /exits/1
-  # GET /exits/1.json
-  def show
-    render_default_format(@exit, true, 200)if @exit.present?
-    render_default_error 'No existe está salida', 401 unless @exit.present?
-  rescue Exception => e
-    render_default_error e, 401
-  end
+    # GET /exits/1
+    # GET /exits/1.json
+    def show
+      render_default_format(@exit, true, 200) if @exit.present?
+      render_default_error 'No existe está salida', 401 unless @exit.present?
+    rescue Exception => e
+      render_default_error e, 401
+    end
 
-def show_details
-  render_default_format(format_show_details(@exit) , true, 200) if @exit.present?
-  render_default_error 'No existe un ticket', 401 unless @exit.present?
-rescue Exception => e
-  render_default_error e, 401
-end
-  def format_show_details model
-    model.as_json(
-             only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
-             methods: %i[time_exit_format],
-             include:{
-                 rate:{
-                     only: %i[value name description date_begin date_end],
-                     methods: %i[]
-                 },
-                 entry:{
-                     only: %i[place is_parking],
-                     methods: %i[time_entry_format],
-                     include:{
-                         vehicle:{
-                             only: %i[ plate brand year],
-                             methods: %i[]
-                         }
+    def show_details
+      render_default_format(format_show_details(@exit), true, 200) if @exit.present?
+      render_default_error 'No existe un ticket', 401 unless @exit.present?
+    rescue Exception => e
+      render_default_error e, 401
+    end
 
-                     }
-                 },
+    def show_statistics
+      render_default_format(format_show_statistics, true, 200)
+    end
 
-             }
-    )
+    def format_show_statistics
+      statistics = [
+        vehicles: Vehicle.count,
+        entries: Entry.count,
+        exits: Exit.count,
+        rates: Rate.count
+      ]
+      statistics.as_json
+    end
 
-  end
+    def format_show_details model
+      model.as_json(
+          only: %i[id entry_id   rate_id ammount_to_paid total_time discount],
+          methods: %i[time_exit_format],
+          include: {
+              rate: {
+                  only: %i[value name description date_begin date_end],
+                  methods: %i[]
+              },
+              entry: {
+                  only: %i[place is_parking],
+                  methods: %i[time_entry_format],
+                  include: {
+                      vehicle: {
+                          only: %i[ plate brand year],
+                          methods: %i[]
+                      }
 
-  # GET /exits/new
-  def new
-    @exit = Exit.new
-    @rate = Rate
-    @entry = Entry
-  end
+                  }
+              },
 
-  # GET /exits/1/edit
-  def edit
-  end
+          }
+      )
 
-  # POST /exits
-  # POST /exits.json
-  def create
-    @exit = Exit.new(exit_params)
-    @exit.discount = @exit.get_discount
-    @exit.total_time = @exit.calcule_minutes
-    @exit.ammount_to_paid = @exit.ammount_with_discount
-    if @exit.save
+    end
+
+    # GET /exits/new
+    def new
+      @exit = Exit.new
+      @rate = Rate
+      @entry = Entry
+    end
+
+    # GET /exits/1/edit
+    def edit
+    end
+
+    # POST /exits
+    # POST /exits.json
+    def create
+      @exit = Exit.new(exit_params)
+      @exit.discount = @exit.get_discount
+      @exit.total_time = @exit.calcule_minutes
+      @exit.ammount_to_paid = @exit.ammount_with_discount
+      if @exit.save
         @exit.exit_parking
-        render_success_format('Nueva salida registrada. Información del ticket: ',format_show_details(@exit),true)
-    else
-      render_default_error 'No se pudo completar la operación', 401
+        render_success_format('Nueva salida registrada. Información del ticket: ', format_show_details(@exit), true)
+      else
+        render_default_error 'No se pudo completar la operación', 401
       end
-  rescue Exception => e
-    render_default_error e, 401
-  end
+    rescue Exception => e
+      render_default_error e, 401
+    end
 
 
-  # PATCH/PUT /exits/1
-  # PATCH/PUT /exits/1.json
-  def update
+    # PATCH/PUT /exits/1
+    # PATCH/PUT /exits/1.json
+    def update
       @exit.update_attributes!(exit_params)
-      render_success_format('La salida fue actualizada', @exit,true )
-  rescue Exception => e
-       render_default_error e, 401
-  end
+      render_success_format('La salida fue actualizada', @exit, true)
+    rescue Exception => e
+      render_default_error e, 401
+    end
 
-  # DELETE /exits/1
-  # DELETE /exits/1.json
-  def destroy
-    @exit.destroy
-    render_success_format('Salida eliminada',@exit,true)
-  rescue Exception => e
-    render_default_error e, 401
-  end
+    # DELETE /exits/1
+    # DELETE /exits/1.json
+    def destroy
+      @exit.destroy
+      render_success_format('Salida eliminada', @exit, true)
+    rescue Exception => e
+      render_default_error e, 401
+    end
 
-  private
+    private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_exit
-      @exit = Exit.find_by(id:params[:id])
+      @exit = Exit.find_by(id: params[:id])
     rescue Exception => e
       render_default_error e, 401
     end
@@ -124,5 +143,5 @@ end
     def exit_params
       params.permit(:entry_id, :date_departure, :hour_departure, :rate_id)
     end
-end
   end
+end

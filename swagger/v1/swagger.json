@@ -343,6 +343,25 @@
         }
       }
     },
+    "/api/exits/show_statistics/": {
+      "get": {
+        "summary": "Show statistics",
+        "tags": [
+          "Exits"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "data found"
+          },
+          "404": {
+            "description": "data not found"
+          }
+        }
+      }
+    },
     "/api/exits/": {
       "get": {
         "summary": "index: get all exits ",

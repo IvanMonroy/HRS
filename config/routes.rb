@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     resources :exits, only: %i[] do
       collection do
         get 'show_details/:id', action: :show_details
+        get 'show_statistics', action: :show_statistics
       end
 
     end

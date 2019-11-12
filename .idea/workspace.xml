@@ -8,7 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb446c9c-656f-4656-acf9-8d8c8b827bab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/exits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/exits_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/v1/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/v1/swagger.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +297,9 @@
       <workItem from="1568931332689" duration="36000" />
       <workItem from="1572291741788" duration="43000" />
       <workItem from="1572620568732" duration="1972000" />
-      <workItem from="1573144222591" duration="256000" />
+      <workItem from="1573144222591" duration="1265000" />
+      <workItem from="1573154162803" duration="82000" />
+      <workItem from="1573568856123" duration="826000" />
     </task>
     <servers />
   </component>
@@ -316,7 +320,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1568731469495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
+    <SUITE FILE_PATH="coverage/HRS@Rails_console__HRPARKING_API.rcov" NAME="Rails console: HRPARKING_API Coverage Results" MODIFIED="1573569274298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
     <SUITE FILE_PATH="coverage/HRS@routes__HRPARKING_API.rcov" NAME="routes: HRPARKING_API Coverage Results" MODIFIED="1568152597858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
     <SUITE FILE_PATH="coverage/HRS@Development__HRPARKING_API.rcov" NAME="Development: HRPARKING_API Coverage Results" MODIFIED="1568731343257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HRPARKING_API" />
   </component>
