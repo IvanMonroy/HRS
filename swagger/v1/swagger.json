@@ -343,7 +343,7 @@
         }
       }
     },
-    "/api/exits/show_statistics/": {
+    "/api/exits/show_statistics": {
       "get": {
         "summary": "Show statistics",
         "tags": [

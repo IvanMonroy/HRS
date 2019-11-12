@@ -24,14 +24,10 @@ Rails.application.routes.draw do
 
     end
     resources :exits, only: %i[index create update show destroy] do
-
-    end
-    resources :exits, only: %i[] do
       collection do
         get 'show_details/:id', action: :show_details
         get 'show_statistics', action: :show_statistics
       end
-
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
