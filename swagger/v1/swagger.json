@@ -24,9 +24,6 @@
                 "plate": {
                   "type": "string"
                 },
-                "date_arrival": {
-                  "type": "date"
-                },
                 "hour_arrival": {
                   "type": "time"
                 },
