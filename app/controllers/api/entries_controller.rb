@@ -42,7 +42,7 @@ class EntriesController < ApplicationController
       render_default_error 'hay un error, Esta placa ya ha sido ingresada', 401
     else
       @entry.date_arrival = Date.today.to_date
-      @entry.hour_arrival = Date.today.to_time
+      @entry.hour_arrival = Time.now
       @entry.is_parking= true
         if @entry.save
           render_success_format('Nueva entrada registrada',format_index_info(@entry),true)
