@@ -41,7 +41,9 @@ class EntriesController < ApplicationController
     if @entry.plate_has_an_entry?
       render_default_error 'hay un error, Esta placa ya ha sido ingresada', 401
     else
-        @entry.is_parking= true
+      @entry.date_arrival = Date.today.to_date
+      @entry.hour_arrival = Date.today.to_time
+      @entry.is_parking= true
         if @entry.save
           render_success_format('Nueva entrada registrada',format_index_info(@entry),true)
         end
@@ -89,7 +91,7 @@ class EntriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def entry_params
-    params.permit(:plate, :date_arrival, :hour_arrival, :place)
+    params.permit(:plate, :place)
   end
 end
   end
